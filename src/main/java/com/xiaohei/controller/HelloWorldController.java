@@ -1,11 +1,12 @@
 package com.xiaohei.controller;
 
-import com.xiaohei.config.MyDatasource;
-import com.xiaohei.config.ThreeDatasource;
-import com.xiaohei.config.TwoDatasouce;
+import com.xiaohei.domain.MyDatasource;
+import com.xiaohei.domain.ThreeDatasource;
+import com.xiaohei.domain.TwoDatasouce;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +28,7 @@ public class HelloWorldController {
     private int randomint;
 
     @RequestMapping("/hello")
-    public String hello() {
+    public String hello(Model model) {
         System.out.println(randomint);
         System.out.println(args.getNonOptionArgs().toString());
         System.out.println(myDatasource);

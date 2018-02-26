@@ -1,4 +1,4 @@
-package com.xiaohei.config;
+package com.xiaohei.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
