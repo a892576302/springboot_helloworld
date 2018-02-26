@@ -12,7 +12,8 @@
         <encoder>
             <pattern>%d %-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
         </encoder>
-        <append>true</append>
+        <!--append：如果是 true，日志被追加到文件结尾，如果是 false，清空现存文件，默认是true。-->
+        <append>false</append>
         <file>myLog.log</file>
     </appender>
     <logger name="com.xiaohei.controller" level="DEBUG">
