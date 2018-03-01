@@ -14,6 +14,7 @@ public class FreeMakerController {
 
     @RequestMapping()
     public String freeMaker(Model model){
+        int a = 1/0;//访问故意报错，测试统一的异常处理类，GlobalExceptionHandler(my)
         model.addAttribute("msg","freeMaker的视图");
         return "freeMaker";
     }
