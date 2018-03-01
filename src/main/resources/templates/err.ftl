@@ -5,6 +5,6 @@
     <title>错误</title>
 </head>
 <body>
-<h1>${error}</h1>
+<h1>报错了：${error}</h1>
 </body>
 </html>
