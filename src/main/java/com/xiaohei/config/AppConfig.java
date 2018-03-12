@@ -1,13 +1,13 @@
 package com.xiaohei.config;
 
-import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.druid.pool.DruidDataSourceFactory;
 import com.xiaohei.domain.MyDatasource;
 import com.xiaohei.domain.ThreeDatasource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 import java.util.Properties;
@@ -56,4 +56,11 @@ public class AppConfig {
    public DataSource dataSource(Properties properties) throws Exception {
        return DruidDataSourceFactory.createDataSource(properties);
    }*/
+
+    /*事物管理器*/
+   /* @Bean
+    public PlatformTransactionManager transactionManager(DataSource dataSource){
+        return new DataSourceTransactionManager(dataSource);
+    }*/
+
 }
