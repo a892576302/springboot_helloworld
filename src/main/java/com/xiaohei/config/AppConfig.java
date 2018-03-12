@@ -1,6 +1,7 @@
 package com.xiaohei.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.pool.DruidDataSourceFactory;
 import com.xiaohei.domain.MyDatasource;
 import com.xiaohei.domain.ThreeDatasource;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
+import java.util.Properties;
 
 /**
  * Created by 非洲小黑 on 2018/2/8.
@@ -35,9 +37,9 @@ public class AppConfig {
 
 
     /**
-     * 代码的方式实现datasource
+     * 第一种代码的方式实现datasource
      */
-    @Bean
+   /* @Bean
     public DataSource getDataSource(){
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
@@ -47,5 +49,11 @@ public class AppConfig {
         dataSource.setInitialSize(5);
         dataSource.setMinIdle(5);
         return dataSource;
-    }
+    }*/
+    /*//配置和代码形式实现
+   @Bean
+   @ConfigurationProperties(prefix = "ds")
+   public DataSource dataSource(Properties properties) throws Exception {
+       return DruidDataSourceFactory.createDataSource(properties);
+   }*/
 }
