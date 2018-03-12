@@ -1,10 +1,11 @@
 package com.xiaohei;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import javax.activation.DataSource;
+import javax.sql.DataSource;
 
 /**
  * Created by 非洲小黑 on 2018/1/31.
@@ -16,7 +17,13 @@ public class App {
      */
     @Bean
     public DataSource getDataSource(){
-        return null;
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql:///shuaihei");
+        dataSource.setUsername("root");
+        dataSource.setPassword("luo0514");
+        dataSource.setInitialSize(3);
+        return dataSource;
     }
 
     /*public static void main(String[] args) {
