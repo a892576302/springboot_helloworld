@@ -44,7 +44,8 @@ public class AppConfig {
         dataSource.setUrl("jdbc:mysql:///shuaihei");
         dataSource.setUsername("root");
         dataSource.setPassword("luo0514");
-        dataSource.setInitialSize(3);
+        dataSource.setInitialSize(5);
+        dataSource.setMinIdle(5);
         return dataSource;
     }
 }
