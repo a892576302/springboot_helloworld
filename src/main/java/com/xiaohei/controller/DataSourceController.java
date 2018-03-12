@@ -18,6 +18,6 @@ public class DataSourceController {
     @RequestMapping(value = "ds")
     @ResponseBody
     public String dataSource(){
-        return dataSource.getClass()+"-----"+dataSource.toString();
+        return dataSource.getClass()+"------"+dataSource.toString();
     }
 }
