@@ -15,7 +15,7 @@ public class DataSourceController {
     @Autowired
     private DataSource dataSource;
 
-    @RequestMapping(value = "dataSource")
+    @RequestMapping(value = "ds")
     @ResponseBody
     public String dataSource(){
         return dataSource.getClass()+"-----"+dataSource.toString();
