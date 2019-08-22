@@ -1,8 +1,5 @@
 package com.xiaohei.controller;
 
-import com.xiaohei.domain.MyDatasource;
-import com.xiaohei.domain.ThreeDatasource;
-import com.xiaohei.domain.TwoDatasouce;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
@@ -18,12 +15,6 @@ public class HelloWorldController {
 
     @Autowired
     private ApplicationArguments args;
-    @Autowired
-    private MyDatasource myDatasource;
-    @Autowired
-    private TwoDatasouce twoDatasouce;
-    @Autowired
-    private ThreeDatasource threeDatasource;
     @Value("${springboot.randomint}")
     private int randomint;
 
@@ -31,9 +22,6 @@ public class HelloWorldController {
     public String hello(Model model) {
         System.out.println(randomint);
         System.out.println(args.getNonOptionArgs().toString());
-        System.out.println(myDatasource);
-        System.out.println(twoDatasouce);
-        System.out.println(threeDatasource);
         return "hello world";
     }
 }
