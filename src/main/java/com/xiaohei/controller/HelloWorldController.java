@@ -22,6 +22,6 @@ public class HelloWorldController {
     public String hello(Model model) {
         System.out.println(randomint);
         System.out.println(args.getNonOptionArgs().toString());
-        return "hello world RBSD";
+        return "hello world gggggg";
     }
 }
